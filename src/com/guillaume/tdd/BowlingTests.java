@@ -56,22 +56,6 @@ public class BowlingTests {
 		assertEquals(300, game.score());
 	}
 
-	@Test
-	public void testSpareFollowedByAStrike() throws Exception {
-		rollSpare();
-		rollStrike();
-		multipleRolls(16, 0);
-		assertEquals(30, game.score());
-	}
-
-	@Test
-	public void testStrikeFollowedByASpare() throws Exception {
-		rollStrike();
-		rollSpare();
-		multipleRolls(16, 0);
-		assertEquals(30, game.score());
-	}
-
 	private void rollStrike() {
 		game.roll(10);
 	}
